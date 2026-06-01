@@ -1,59 +1,20 @@
-# AC Milan Data Engineering Pipeline
+# 🔴⚫ AC Milan Performance ETL Pipeline (2023/24 Season)
 
-## Overview
+## 📌 Project Overview
+This project is an automated **ETL (Extract, Transform, Load)** pipeline designed to process and analyze AC Milan's performance data for the 2023/24 Serie A season. 
 
-This project demonstrates a football data engineering pipeline using Python, APIs, SQL and ETL concepts.
-
-The system:
-1. Extracts external data from an API
-2. Transforms and enriches football player statistics
-3. Loads processed data into a SQL database
-4. Exports clean analytical datasets
+The goal was to take raw match and player data, engineer new performance metrics (like Goal Contributions and Match Goal Differences), and load them into a structured SQL database for professional-grade analytics.
 
 ---
 
-## Technologies Used
+## 🏗️ ETL Architecture
+The pipeline follows a modular architecture to ensure clean code and scalability:
 
-- Python
-- Pandas
-- Requests
-- SQLAlchemy
-- SQLite
-- GitHub
-
----
-
-## ETL Architecture
-
-API → Python → Data Transformation → SQL Database → CSV Export
-
----
-
-## Features
-
-- Automated API integration
-- Football player performance analytics
-- Goal contribution calculations
-- SQL relational database loading
-- Clean structured exports
-
----
-
-## Skills Demonstrated
-
-- ETL pipeline development
-- API integration
-- Python automation
-- SQL database engineering
-- Data transformation
-- Structured data management
-- GitHub version control
-
----
-
-## Future Improvements
-
-- Azure Blob Storage integration
-- Azure Data Factory orchestration
-- Power BI dashboard visualisation
-- CI/CD automation using Azure DevOps
+```mermaid
+graph LR
+    A[Raw CSV Data] --> B[Extract]
+    B --> C[Transform]
+    C --> D[Load]
+    D --> E[(SQLite DB)]
+    D --> F[Clean CSV Exports]
+    E --> G[SQL Analytics]

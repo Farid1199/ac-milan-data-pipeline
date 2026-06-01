@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.Python
+
+# Local environments
+.venv/
+
+# Pipeline-generated outputs
+database/ac_milan.db
+exports/*.csv
